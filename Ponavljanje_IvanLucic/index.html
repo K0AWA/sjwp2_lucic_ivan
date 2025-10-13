@@ -37,6 +37,12 @@
         nav{
             margin-left: 50%;
         }
+        label,input{
+            width: 100%;
+            border-radius: 4px;
+        }
+        #btn{
+            background-color: #C2F8F7;}
     </style>
 <body>
 
@@ -68,10 +74,11 @@ animiran. Animacije mogu biti definirane i pokrenute interaktivno ili pomoću sk
             <p>SVG integrira druge W3C standarde kao što su DOM, XSL …</p>
 
 
-        <h3>Usporedba SVG-a i Canvasa</h3>   
-        <table>
+    <h3>Usporedba SVG-a i Canvasa</h3>   
+    
+    <table>
     <tr>
-      <th>SVG</th>
+      <td><strong>SVG</strong></td>
       <th>HTML Canvas</th>
     </tr>
     <tr>
@@ -94,22 +101,84 @@ animiran. Animacije mogu biti definirane i pokrenute interaktivno ili pomoću sk
 
   <br>
   <img src="zar.jpg" alt="slika">
-  <svg width="200" height="200" viewBox="0 0 200 200">
-            <rect x="0" y="0" width="200" height="200" fill="#8bc34a"/>
-            
-            <rect x="60" y="40" width="80" height="120" fill="#f5f5dc"/> 
-            
-            <rect x="60" y="40" width="80" height="10" fill="black"/> 
-            
-            <rect x="70" y="115" width="60" height="40" fill="#ffc0cb"/>
 
-            <circle cx="85" cy="80" r="7" fill="green"/> 
-            <circle cx="115" cy="80" r="7" fill="green"/> 
-
-            <polygon points="100,105 95,95 105,95" fill="#696969"/> 
-        </svg>
+  <br>
+  <h2>Primjer SVG-a i Canvasa</h2>
 
 
+    <svg height="400" width="500">
+    <rect fill="lightgreen" height="400" width="400"></rect>
+    
+    <rect fill="lightyellow" height="200" width="150" x="100" y="100"></rect>
+    <circle r="50" fill="pink" cx="175" cy="230"></circle>
+
+    <rect fill="lightyellow" height="140" width="150" x="100" y="100"></rect>
+    <rect fill="black" height="30" width="150" x="100" y="100"></rect>
+
+    <circle r="20" cx="130" cy="180" fill="white"></circle>
+    <circle r="20" cx="220" cy="180" fill="white"></circle>
+    <circle r="13" cx="130" cy="180" fill="green"></circle>
+    <circle r="13" cx="220" cy="180" fill="green"></circle>
+
+    <polygon fill="gray" points="160,220 190,220 175,210"></polygon>
+    </svg>
+
+<canvas id="myCanvas" width="400" height="400" background-color="green"></canvas>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx= c.getContext("2d");
+        ctx.beginPath();
+        ctx.rect(0, 0, 600, 600);
+        ctx.fillStyle="lightgreen";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(100, 100, 150, 200);
+        ctx.fillStyle="lightyellow";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(100, 100, 150, 30);
+        ctx.fillStyle="black";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(130, 180, 20, 0, 2*Math.PI);
+        ctx.fillStyle="white";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(220, 180, 20, 0, 2*Math.PI);
+        ctx.fillStyle="white";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(130, 180, 13, 0, 2*Math.PI);
+        ctx.fillStyle="green";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(220, 180, 13, 0, 2*Math.PI);
+        ctx.fillStyle="green";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(175,210);
+        ctx.lineTo(160,220);
+        ctx.lineTo(190,220);
+        ctx.fillStyle="gray"
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(175, 230, 50, 0, 1*Math.PI);
+        ctx.fillStyle="pink";
+        ctx.fill();
+    </script>
+</canvas>
+
+
+
+
+    <form action="#" method="get">
+    <label for="ime">Ime:</label>
+    <input type="text" id="ime"> <br>
+    <label for="email">Email:</label>
+    <input type="text" id="prezime"> <br>
+    <label for="poruka">Poruka:</label>
+    <input type="submit" value="Pošalji" id="btn">
+</form>
 
 </body>
 </html>
