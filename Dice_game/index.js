@@ -41,6 +41,12 @@ else{
 
 
 
+
+
+
+
+
+
 /*1. Kako pristupiti h1 elementu preko njegovog ID-ja title i promijeniti mu boju u crvenu?
 document.getElementById("title").style.color = "red";
 
