@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Str</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <h1>Filmovi, serije, igrice</h1>
+  <nav>
+    <button onclick="filterCategory('all')">Sve</button>
+    <button onclick="filterCategory('film')">Filmovi</button>
+    <button onclick="filterCategory('serija')">Serije</button>
+    <button onclick="filterCategory('igrice')">Igrice</button>
+  </nav>
+</header>
+
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h2 id="popupTitle"></h2>
+    <p id="popupDesc"></p>
+  </div>
+</div>
+
+<section class="movies" id="movieList">
+ 
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
