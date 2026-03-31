@@ -11,9 +11,9 @@
 <body>
     <h1>Moja osobna web stranica iz web programiranja</h1>
     <h3>Zadaće:</h3>
-    <ul>
+
         <li><a href="./Filmovi/index.html">Zadaća1</a></li>
 
-    </ul>
+   
 </body>
 </html>
